@@ -53,6 +53,7 @@ export default async function run(
 
   // Prepare access token.
   const accessToken: string = teamsfxContext["AccessToken"];
+  console.log("Access token : $(accessToken)");
   if (!accessToken) {
     return {
       status: 400,
@@ -66,6 +67,8 @@ export default async function run(
   let teamsfx: TeamsFx;
   try {
     teamsfx = new TeamsFx().setSsoToken(accessToken);
+    console.log("Access token : ");
+    console.log(accessToken);
   } catch (e) {
     context.log.error(e);
     return {

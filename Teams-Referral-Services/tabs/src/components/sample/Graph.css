@@ -1,5 +1,15 @@
 .section-margin {
-  margin-left: 20px;
+  float: left;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.InfoCard {
+  position:absolute;
+    top:2vh;
+    right: 25vw;
+  
 }
 
 .mgt-light {
@@ -9,3 +19,4 @@
 .mgt-dark {
   background-color: inherit !important;
 }
+

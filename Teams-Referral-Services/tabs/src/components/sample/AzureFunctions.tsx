@@ -13,6 +13,7 @@ async function callFunction(teamsfx?: TeamsFx) {
   }
   try {
     const accessToken = await teamsfx.getCredential().getToken("");
+    console.log("Access token : $(accessToken)");
     const endpoint = teamsfx.getConfig("apiEndpoint");
     const response = await axios.default.get(endpoint + "/api/" + functionName, {
       headers: {

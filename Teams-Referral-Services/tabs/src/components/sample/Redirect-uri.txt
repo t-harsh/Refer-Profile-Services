@@ -1,0 +1,4 @@
+WEB: "https://localhost/auth-end.html"
+
+SPA: "https://localhost/auth-end.html?clientId=c356fd17-3be3-40d6-b337-aaabc7be51bd"
+     "https://localhost/blank-auth-end.html"

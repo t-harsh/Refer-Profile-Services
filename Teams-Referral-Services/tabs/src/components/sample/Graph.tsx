@@ -5,6 +5,9 @@ import { TeamsFxProvider } from '@microsoft/mgt-teamsfx-provider';
 import { Design } from './Design';
 import { useContext } from "react";
 import { TeamsFxContext } from "../Context";
+import { Button } from "@fluentui/react-northstar";
+import { PersonCardFluentUI } from './PersonCardFluentUI';
+import { PersonCardGraphToolkit } from './PersonCardGraphToolkit';
 
 export function Graph() {
   const { teamsfx } = useContext(TeamsFxContext);
@@ -33,6 +36,12 @@ export function Graph() {
   return (
     <div>
       <Design />
+      <div className="section-margin">
+        <Button primary content="Authorize" disabled={loading} onClick={reload} />
+      </div>
+      <div className="InfoCard">
+        <PersonCardGraphToolkit loading={loading} data={data} error={error} />
+      </div>
     </div>
   );
 }

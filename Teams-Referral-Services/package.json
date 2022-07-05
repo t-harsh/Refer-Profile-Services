@@ -8,12 +8,20 @@
     },
     "devDependencies": {
         "@microsoft/teamsfx-cli": "1.*",
-        "@types/react": "^18.0.14",
-        "@types/react-dom": "^18.0.5"
+        "@types/react": "^16.14.28",
+        "@types/react-dom": "^16.9.16"
     },
     "license": "MIT",
     "dependencies": {
         "@affinda/affinda": "^1.1.1",
+        "@azure/msal-browser": "^2.26.0",
+        "@azure/msal-react": "^1.4.2",
+        "@types/react-router-dom": "^5.3.3",
+        "bootstrap": "^5.1.3",
+        "react": "^16.14.0",
+        "react-bootstrap": "^2.4.0",
+        "react-dom": "^16.14.0",
+        "react-router-dom": "^5.3.3",
         "worker-thread": "^1.1.0"
     }
 }

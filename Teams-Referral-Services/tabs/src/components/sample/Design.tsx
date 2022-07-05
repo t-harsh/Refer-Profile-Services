@@ -35,9 +35,14 @@ export function Design() {
 
   const changeHandler = async(event : React.FormEvent) => {
     const target = event.target as HTMLFormElement;
+
 		setSelectedFile(target.files[0]);
     const result = await ResumeParse(selectedFile as File)
     console.log(result);
+
+    const url = URL.createObjectURL(target.files[0]);
+    console.log("The url to file is:");
+    console.log(url);
 
     // FirstName.handleSet(result.fname);
 
@@ -108,7 +113,7 @@ export function Design() {
             <Card aria-roledescription="card avatar"
               elevated
               inverted
-              styles={{ height: "260px", width: "770px", background: "white" }}>
+              styles={{ height: "260px", width: "770px", background: "white", borderRadius: "12px 12px" }}>
               <Flex gap="gap.small" column fill vAlign="stretch" space="between" >
                 <CardHeader>
                   <Text content="Upload Resume/LinkedIn" weight="bold" size="large" align="center"/>
@@ -136,7 +141,7 @@ export function Design() {
             <Card aria-roledescription="card avatar"
               elevated
               inverted
-              styles={{ height: "320px", width: "370px", background: "white" }}>
+              styles={{ height: "320px", width: "370px", background: "white", borderRadius: "12px 12px" }}>
               <Flex gap="gap.small" column fill vAlign="stretch" space="around" >
                 <CardHeader>
                   <Text content="Primary Information" weight="bold" size="large" align="center"/>
@@ -166,7 +171,7 @@ export function Design() {
             <Card aria-roledescription="card avatar"
               elevated
               inverted
-              styles={{ height: "200px", width: "370px", background: "white" }}>
+              styles={{ height: "200px", width: "370px", background: "white", borderRadius: "12px 12px" }}>
               <Flex gap="gap.small" column fill vAlign="stretch" space="around" >
                 <CardHeader>
                   <Text content="Professional Information" weight="bold" size="large" align="center" />
@@ -185,7 +190,7 @@ export function Design() {
             <Card aria-roledescription="card avatar"
               elevated
               inverted
-              styles={{ height: "530px", width: "370px", background: "white" }}>
+              styles={{ height: "530px", width: "370px", background: "white", borderRadius: "12px 12px" }}>
               <Flex gap="gap.small" column fill vAlign="stretch" space="between" >
                 <CardHeader>
                   <Text content="Additional Information" weight="bold" size="large" align="center"/>

@@ -18,6 +18,12 @@
       integrity="sha384-s/NxjjAgw1QgpDhOlVjTceLl4axrp5nqpUbCPOEQy1PqbFit9On6uw2XmEF1eq0s"
       crossorigin="anonymous"
     ></script>
+    <script>
+      src="https://unpkg.com/@microsoft/mgt/dist/bundle/mgt-loader.js">
+    </script>
+    <script>
+      mgt.TeamsMsal2Provider.handleAuth();
+    </script>
     <script type="text/javascript">
       microsoftTeams.initialize();
 
@@ -28,6 +34,10 @@
         var clientId = currentURL.searchParams.get("clientId");
         var scope = currentURL.searchParams.get("scope");
         var loginHint = currentURL.searchParams.get("loginHint");
+        
+        console.log("Client Id:");
+        console.log(clientId);
+
 
         const msalConfig = {
           auth: {
@@ -39,6 +49,16 @@
             cacheLocation: "sessionStorage",
           },
         };
+
+        <mgt-teams-msal2-provider 
+          client-id="c356fd17-3be3-40d6-b337-aaabc7be51bd"
+          auth-popup-url="/auth-start"
+          scopes="user.read,people.read..." 
+          authority=""
+          sso-url="/api/token" 
+          http-method="POST">
+        </mgt-teams-msal2-provider>
+
 
         const msalInstance = new msal.PublicClientApplication(msalConfig);
         const scopesArray = scope.split(" ");
